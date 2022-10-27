@@ -13,18 +13,18 @@ class _FigureBState extends State<FigureB> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: IconButton(onPressed: (){
-            Navigator.pop(context);
-          }, icon: const Icon(Icons.arrow_back)),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back)),
         ),
         backgroundColor: Colors.white,
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return const FigureC();
-              })
-              );
+              }));
             },
             child: const Icon(Icons.arrow_forward)),
         body: SafeArea(
@@ -70,8 +70,7 @@ class _FigureBState extends State<FigureB> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
 

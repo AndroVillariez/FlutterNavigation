@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_layouts/figure_a.dart';
+import 'figure_a.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -35,7 +35,6 @@ class LoginScreen extends StatelessWidget {
                 decoration: const InputDecoration(
                   labelText: "Username",
                   border: OutlineInputBorder(),
-
                 ),
               ),
               const SizedBox(
@@ -54,11 +53,10 @@ class LoginScreen extends StatelessWidget {
                 height: 1,
               ),
               Row(
-                mainAxisAlignment:  MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  TextButton(onPressed: (){}, child: const Text(
-                      "Forgot Password?"
-                  ))
+                  TextButton(
+                      onPressed: () {}, child: const Text("Forgot Password?"))
                 ],
               ),
               const SizedBox(
@@ -69,16 +67,15 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  gradient: const LinearGradient(colors: [Colors.green, Colors.teal]),
+                  gradient:
+                      const LinearGradient(colors: [Colors.green, Colors.teal]),
                 ),
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
+                    Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                          return const FigureA();
-                        })
-                    );
+                      return const FigureA();
+                    }));
                   },
                   child: const Text(
                     "LOGIN",
@@ -98,20 +95,16 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-
               Row(
-                mainAxisAlignment:  MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Don't have an Account?",
                     style: TextStyle(
                       color: Colors.black.withOpacity(0.7),
                     ),
-
                   ),
-                  TextButton(onPressed: (){}, child: const Text(
-                      "Sign Up"
-                  ))
+                  TextButton(onPressed: () {}, child: const Text("Sign Up"))
                 ],
               ),
             ],

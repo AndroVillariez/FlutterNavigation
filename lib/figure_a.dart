@@ -7,22 +7,22 @@ class FigureA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(onPressed: (){
-          Navigator.pop(context);
-    }, icon: const Icon(Icons.arrow_back)),
-      ),
+        appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back)),
+        ),
         backgroundColor: Colors.white,
         floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context, MaterialPageRoute(builder: (context) {
-              return const FigureB();
-        })
-        );
-        },
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const FigureB();
+              }));
+            },
             child: const Icon(Icons.arrow_forward)),
-            body: SafeArea(
+        body: SafeArea(
           child: Center(
             child: SizedBox(
               height: 550,
